@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Abhi",
+    "education": "MBA",
+    "city": "Mysore"
+  },
+  {
+    "name": "Taniya",
+    "education": "MCA",
+    "city": "Mangalore"
+  },
+  {
+    "name": "Basu",
+    "education": "BCA",
+    "city": "Pune"
+  },
+  {
+    "name": "Navdeep",
+    "education": "BE",
+    "city": "Hydrabad"
+  }
+]

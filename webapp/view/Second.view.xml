@@ -1,0 +1,55 @@
+<mvc:View
+  controllerName="myapp.myui5project.controller.Second"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  displayBlock="true">
+
+  <Page title="Friends List">
+    <headerContent>
+      <Button text="Logout" press=".onLogout" icon="sap-icon://log" />
+    </headerContent>
+
+    <content>
+      <Table
+        id="friendsTable"
+        mode="SingleSelectLeft"
+        includeItemInSelection="true"
+        selectionChange=".onSelectionChange"
+        items="{friendsModel>/friends}">
+
+        <headerToolbar>
+          <Toolbar>
+            <Title text="Friends" level="H2" />
+            <ToolbarSpacer />
+            <Button text="Refresh" icon="sap-icon://refresh" press=".onRefresh" />
+            <Button text="Add" icon="sap-icon://add" press=".onAddFriend" />
+            <Button id="deleteButton" text="Delete" icon="sap-icon://delete" press=".onDeleteFriend" enabled="false" />
+          </Toolbar>
+        </headerToolbar>
+
+        <columns>
+          <Column>
+            <Text text="Name" />
+          </Column>
+          <Column>
+            <Text text="Education" />
+          </Column>
+          <Column>
+            <Text text="City" />
+          </Column>
+        </columns>
+
+        <items>
+          <ColumnListItem>
+            <cells>
+              <Text text="{friendsModel>name}" />
+              <Text text="{friendsModel>education}" />
+              <Text text="{friendsModel>city}" />
+            </cells>
+          </ColumnListItem>
+        </items>
+
+      </Table>
+    </content>
+  </Page>
+</mvc:View>

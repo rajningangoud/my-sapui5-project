@@ -1,0 +1,16 @@
+<mvc:View
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  displayBlock="true"
+  controllerName="myapp.myui5project.controller.MainView">
+
+  <Page title="Login">
+    <content>
+      <VBox class="sapUiSmallMargin" renderType="Bare" width="100%">
+        <Input id="username" placeholder="Enter Username" value="{loginModel>/username}" />
+        <Input id="password" type="Password" placeholder="Enter Password" value="{loginModel>/password}" />
+        <Button text="Login" type="Emphasized" press=".onLogin" />
+      </VBox>
+    </content>
+  </Page>
+</mvc:View>

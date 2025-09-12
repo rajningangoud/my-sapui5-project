@@ -1,0 +1,18 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+  <Table id="fragFriendsTable" items="{friendsModel>/friends}">
+    <columns>
+      <Column><Text text="Name"/></Column>
+      <Column><Text text="Education"/></Column>
+      <Column><Text text="City"/></Column>
+    </columns>
+    <items>
+      <ColumnListItem>
+        <cells>
+          <Text text="{friendsModel>name}"/>
+          <Text text="{friendsModel>education}"/>
+          <Text text="{friendsModel>city}"/>
+        </cells>
+      </ColumnListItem>
+    </items>
+  </Table>
+</core:FragmentDefinition>

@@ -1,0 +1,79 @@
+{
+  "_version": "1.12.0",
+  "sap.app": {
+    "id": "myapp.myui5project",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "title": "My Friends App",
+    "description": "SAPUI5 Login + Friends List App with Logout",
+    "applicationVersion": {
+      "version": "1.0.0"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "dependencies": {
+      "minUI5Version": "1.90.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {},
+        "sap.ui.layout": {}
+      }
+    },
+    "models": {},
+    "rootView": {
+      "viewName": "myapp.myui5project.view.App",
+      "type": "XML",
+      "id": "app"
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "myapp.myui5project.view",
+        "controlId": "app",
+        "controlAggregation": "pages",
+        "bypassed": {
+          "target": "MainView"
+        }
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "RouteMainView",
+          "target": "MainView"
+        },
+        {
+          "pattern": "friends",
+          "name": "Second",
+          "target": "Second"
+        }
+      ],
+      "targets": {
+        "MainView": {
+          "viewName": "MainView",
+          "viewLevel": 1
+        },
+        "Second": {
+          "viewName": "Second",
+          "viewLevel": 2
+        }
+      }
+    }
+  }
+}
